@@ -1,76 +1,76 @@
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, Plus, ArrowRight, MessageSquare, GitBranch, X, Puzzle, Figma } from "lucide-react"
+import { ChevronLeft, ChevronRight, Plus, ArrowRight, MessageSquare, FileCheck, X, Puzzle, BarChart3 } from "lucide-react"
 
 const carouselCards = [
   {
     id: 1,
-    category: "Запросы клиентов",
-    title: "Создавайте то, что нужно клиентам",
+    category: "Запросы брокеров",
+    title: "Мгновенно реагируйте на запросы партнёров",
     icon: ArrowRight,
-    mockup: "intercom",
+    mockup: "broker",
   },
   {
     id: 2,
-    category: "Git-интеграция",
-    title: "Автоматизируйте PR и коммиты",
+    category: "Согласование правил",
+    title: "Автоматизируйте проверку правил страхования",
     icon: Plus,
-    mockup: "github",
+    mockup: "approval",
   },
   {
     id: 3,
-    category: "Orbit Mobile",
-    title: "Управляйте работой откуда угодно",
+    category: "Мобильный доступ",
+    title: "Управляйте продуктами из любой точки",
     icon: ArrowRight,
     mockup: "mobile",
   },
   {
     id: 4,
-    category: "Orbit Asks",
-    title: "Превращайте запросы в задачи",
+    category: "Клиентские заявки",
+    title: "Превращайте запросы в страховые продукты",
     icon: ArrowRight,
     mockup: "asks",
   },
   {
     id: 5,
-    category: "Интеграции Orbit",
-    title: "100+ способов расширить возможности",
+    category: "Интеграции",
+    title: "50+ интеграций с системами СК",
     icon: ArrowRight,
     mockup: "integrations",
   },
   {
     id: 6,
-    category: "Интеграция с Figma",
-    title: "Связь между разработкой и дизайном",
+    category: "Аналитика",
+    title: "Данные для принятия тарифных решений",
     icon: ArrowRight,
-    mockup: "figma",
+    mockup: "analytics",
   },
   {
     id: 7,
     category: "Для разработчиков",
-    title: "Создавайте плагины через Orbit API",
+    title: "Создавайте модули через Альбатрос API",
     icon: ArrowRight,
     mockup: "api",
   },
 ]
 
-function IntercomMockup() {
+function BrokerMockup() {
   return (
     <div className="flex flex-col gap-3 p-4">
       <div className="flex items-center gap-2 text-xs text-zinc-400">
         <MessageSquare className="w-3.5 h-3.5" />
-        <span>Intercom</span>
+        <span>Брокер</span>
         <span className="text-zinc-600">·</span>
-        <span className="text-zinc-500">sarah@example.com</span>
+        <span className="text-zinc-500">broker@partner.ru</span>
       </div>
       <p className="text-sm text-zinc-300">
-        Нужна разбивка затрат <span className="text-zinc-500">по...</span>
+        Нужен расчёт тарифа КАСКО <span className="text-zinc-500">для...</span>
       </p>
 
       <div className="mt-2 flex items-center gap-2 bg-zinc-800/50 rounded-lg px-3 py-2">
-        <div className="w-5 h-5 bg-zinc-700 rounded flex items-center justify-center">
-          <span className="text-[10px] text-zinc-400">A</span>
+        <div className="w-5 h-5 bg-blue-700 rounded flex items-center justify-center">
+          <span className="text-[10px] text-white">А</span>
         </div>
-        <span className="text-sm text-zinc-300">ACME</span>
+        <span className="text-sm text-zinc-300">Авто-Логистик</span>
         <span className="text-xs text-zinc-500">Новый запрос</span>
       </div>
 
@@ -78,53 +78,51 @@ function IntercomMockup() {
         <div className="w-5 h-5 bg-yellow-500/20 rounded flex items-center justify-center">
           <span className="text-[10px] text-yellow-500">◆</span>
         </div>
-        <span className="text-sm text-zinc-400">Мультиоблачные</span>
-        <span className="text-xs text-zinc-500">затраты</span>
+        <span className="text-sm text-zinc-400">Флот 20 авто</span>
+        <span className="text-xs text-zinc-500">корпоративный</span>
       </div>
 
       <div className="mt-1 flex items-center gap-2 px-3 py-2">
         <div className="w-4 h-4 rounded-full border border-zinc-600" />
-        <span className="text-sm text-zinc-500">Планирование</span>
+        <span className="text-sm text-zinc-500">Срок подачи</span>
         <div className="ml-2 flex items-center gap-1 text-xs text-zinc-600">
-          <span>Q4 2025</span>
+          <span>Q2 2026</span>
         </div>
       </div>
     </div>
   )
 }
 
-function GitHubMockup() {
+function ApprovalMockup() {
   return (
     <div className="flex flex-col gap-2 p-4">
       <div className="flex items-center gap-2 text-xs">
-        <GitBranch className="w-3.5 h-3.5 text-zinc-500" />
-        <span className="text-zinc-400">#20319</span>
-        <span className="text-zinc-500">igor/lin 15287</span>
-        <span className="text-blue-400/70">add sourc...</span>
+        <FileCheck className="w-3.5 h-3.5 text-zinc-500" />
+        <span className="text-zinc-400">#РУ-2026</span>
+        <span className="text-zinc-500">правила/каско-стандарт</span>
+        <span className="text-blue-400/70">ред. 3...</span>
       </div>
 
       <div className="mt-3 space-y-2">
         <div className="flex items-center gap-2 text-xs">
           <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">связал</span>
-          <span className="text-blue-400/70">igor/lin 15287</span>
-          <span className="text-zinc-600">add sou...</span>
+          <span className="text-zinc-500">Актуарий</span>
+          <span className="text-zinc-600">согласовал тарифную ставку</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">изменил статус с В работе...</span>
+          <span className="text-zinc-500">Юрист</span>
+          <span className="text-zinc-600">проверил правила страхования</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">GitHub</span>
-          <span className="text-zinc-600">изменил статус с На ревью...</span>
+          <span className="text-zinc-500">ЦБ РФ</span>
+          <span className="text-zinc-600">проверка соответствия пройдена</span>
         </div>
         <div className="flex items-center gap-2 text-xs">
           <span className="text-zinc-600">↗</span>
-          <span className="text-zinc-500">igor</span>
-          <span className="text-zinc-600">изменил статус с Готово...</span>
+          <span className="text-zinc-500">Директор</span>
+          <span className="text-zinc-600">утвердил продукт к запуску</span>
         </div>
       </div>
     </div>
@@ -137,7 +135,7 @@ function MobileMockup() {
       <div className="relative w-32 h-56 bg-zinc-900 rounded-2xl border border-zinc-700 overflow-hidden">
         <div className="absolute top-2 left-1/2 -translate-x-1/2 w-12 h-1 bg-zinc-800 rounded-full" />
         <div className="mt-6 px-3">
-          <div className="text-[10px] text-zinc-400 mb-2">Входящие</div>
+          <div className="text-[10px] text-zinc-400 mb-2">Мои продукты</div>
           <div className="space-y-1.5">
             {[1, 2, 3, 4].map((i) => (
               <div key={i} className="h-6 bg-zinc-800/50 rounded" />
@@ -173,11 +171,11 @@ function IntegrationsMockup() {
   )
 }
 
-function FigmaMockup() {
+function AnalyticsMockup() {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="relative">
-        <Figma className="w-16 h-16 text-zinc-400" />
+        <BarChart3 className="w-16 h-16 text-blue-400/60" />
       </div>
     </div>
   )
@@ -187,7 +185,7 @@ function ApiMockup() {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="bg-zinc-800/50 rounded-lg px-4 py-2 border border-zinc-700/50">
-        <span className="text-xs font-mono text-zinc-400">ORBIT API</span>
+        <span className="text-xs font-mono text-zinc-400">ALBATROS API</span>
       </div>
     </div>
   )
@@ -195,18 +193,18 @@ function ApiMockup() {
 
 function CardMockup({ type }: { type: string }) {
   switch (type) {
-    case "intercom":
-      return <IntercomMockup />
-    case "github":
-      return <GitHubMockup />
+    case "broker":
+      return <BrokerMockup />
+    case "approval":
+      return <ApprovalMockup />
     case "mobile":
       return <MobileMockup />
     case "asks":
       return <AsksMockup />
     case "integrations":
       return <IntegrationsMockup />
-    case "figma":
-      return <FigmaMockup />
+    case "analytics":
+      return <AnalyticsMockup />
     case "api":
       return <ApiMockup />
     default:
@@ -251,74 +249,63 @@ export function WorkflowsSection() {
             <h2 className="text-4xl md:text-5xl font-medium text-white leading-[1.1]">
               Работайте слаженно
               <br />
-              между инструментами
+              со всеми системами СК
             </h2>
           </div>
 
           {/* Description */}
-          <p className="text-zinc-400 lg:max-w-sm lg:pt-12">
-            Расширьте возможности Orbit с помощью интеграций, которые синхронизируют всю команду и держат фокус на
-            главном.
-          </p>
+          <div className="lg:max-w-sm">
+            <p className="text-zinc-400 leading-relaxed mb-6">
+              Альбатрос интегрируется с АИС страховщика, CRM, системами урегулирования убытков и брокерскими платформами — без дублирования данных.
+            </p>
+
+            {/* Navigation */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={scrollLeft}
+                className="w-9 h-9 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors"
+              >
+                <ChevronLeft className="w-4 h-4" />
+              </button>
+              <button
+                onClick={scrollRight}
+                className="w-9 h-9 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors"
+              >
+                <ChevronRight className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Carousel */}
-        <div className="relative overflow-hidden">
+        {/* Cards carousel */}
+        <div className="overflow-hidden">
           <div
-            className="flex gap-4 transition-transform duration-300 ease-out"
-            style={{ transform: `translateX(-${scrollPosition * (100 / 4)}%)` }}
+            className="flex gap-4 transition-transform duration-500 ease-out"
+            style={{
+              transform: `translateX(calc(-${scrollPosition} * (280px + 16px)))`,
+            }}
           >
             {carouselCards.map((card) => (
-              <div key={card.id} className="flex-shrink-0 w-[calc(25%-12px)] min-w-[280px]">
-                <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-xl overflow-hidden h-[340px] flex flex-col">
-                  {/* Mockup area */}
-                  <div className="flex-1 relative overflow-hidden">
-                    <CardMockup type={card.mockup} />
-                    {/* Fade overlay */}
-                    <div
-                      className="absolute bottom-0 left-0 right-0 h-16 pointer-events-none"
-                      style={{
-                        background: "linear-gradient(to top, rgba(9,9,11,0.9), transparent)",
-                      }}
-                    />
-                  </div>
+              <div
+                key={card.id}
+                className="shrink-0 w-[280px] h-[320px] bg-zinc-900/50 border border-zinc-800 hover:border-zinc-700 rounded-2xl overflow-hidden cursor-pointer transition-colors flex flex-col"
+              >
+                {/* Card mockup */}
+                <div className="flex-1 overflow-hidden">
+                  <CardMockup type={card.mockup} />
+                </div>
 
-                  {/* Card footer - refactored for proper icon alignment */}
-                  <div className="p-4 border-t border-zinc-800/30">
-                    <div className="flex items-center justify-between gap-3">
-                      {/* Text content */}
-                      <div className="flex-1 min-w-0">
-                        <p className="text-xs text-zinc-500 mb-1">{card.category}</p>
-                        <p className="text-sm text-zinc-200 leading-snug">{card.title}</p>
-                      </div>
-                      {/* Icon button - fixed size, vertically centered */}
-                      <button className="flex-shrink-0 w-8 h-8 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-500 hover:text-zinc-300 hover:border-zinc-600 transition-colors">
-                        <card.icon className="w-4 h-4" />
-                      </button>
-                    </div>
+                {/* Card footer */}
+                <div className="p-5 border-t border-zinc-800/50">
+                  <div className="text-xs text-zinc-500 mb-1">{card.category}</div>
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm text-zinc-200 font-medium leading-tight flex-1 mr-3">{card.title}</h3>
+                    <card.icon className="w-4 h-4 text-zinc-500 shrink-0" />
                   </div>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Navigation arrows */}
-        <div className="flex items-center justify-center gap-2 mt-8">
-          <button
-            onClick={scrollLeft}
-            className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-            disabled={scrollPosition === 0}
-          >
-            <ChevronLeft className="w-5 h-5" />
-          </button>
-          <button
-            onClick={scrollRight}
-            className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-            disabled={scrollPosition >= carouselCards.length - 4}
-          >
-            <ChevronRight className="w-5 h-5" />
-          </button>
         </div>
       </div>
     </section>

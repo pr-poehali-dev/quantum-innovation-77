@@ -37,7 +37,7 @@ export function Hero3DStage() {
       <section className="relative min-h-screen overflow-hidden" style={{ backgroundColor: "#09090B" }}>
         <Navbar />
 
-        {/* Subtle glow */}
+        {/* Subtle glow — blue for insurance */}
         <div
           className="absolute pointer-events-none"
           style={{
@@ -46,13 +46,13 @@ export function Hero3DStage() {
             transform: "translate(-50%, -30%)",
             width: "1200px",
             height: "800px",
-            background: "radial-gradient(ellipse at center, rgba(99, 102, 241, 0.08) 0%, transparent 70%)",
+            background: "radial-gradient(ellipse at center, rgba(59, 130, 246, 0.08) 0%, transparent 70%)",
           }}
         />
 
         {/* Main content */}
         <div className="relative z-10 pt-28 flex flex-col">
-          {/* Hero text - contained and centered */}
+          {/* Hero text */}
           <div className="w-full flex justify-center px-6 mt-16">
             <div className="w-full max-w-4xl">
               <motion.h1
@@ -61,7 +61,7 @@ export function Hero3DStage() {
                 transition={{ duration: 0.6 }}
                 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
               >
-                Orbit - инструмент для планирования и создания продуктов
+                Конструктор страховых продуктов нового поколения
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -69,9 +69,9 @@ export function Hero3DStage() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="mt-6 text-lg text-zinc-400"
               >
-                Система для современной разработки.
+                Создавайте, настраивайте и запускайте страховые продукты.
                 <br />
-                Управляйте задачами, проектами и дорожными картами.
+                Без кода — быстро, гибко, в соответствии с требованиями регулятора.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -79,11 +79,11 @@ export function Hero3DStage() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="mt-8 flex items-center gap-6"
               >
-                <button className="px-5 py-2.5 bg-white text-zinc-900 font-medium rounded-lg hover:bg-zinc-100 transition-colors text-sm">
-                  Начать работу
+                <button className="px-5 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-500 transition-colors text-sm">
+                  Создать продукт
                 </button>
                 <button className="text-zinc-300 font-medium hover:text-white transition-colors flex items-center gap-2 text-sm">
-                  <span className="text-zinc-500">Новинка:</span> Orbit-агент для Slack
+                  <span className="text-zinc-500">Новинка:</span> ИИ-андеррайтинг в конструкторе
                   <span aria-hidden="true">→</span>
                 </button>
               </motion.div>

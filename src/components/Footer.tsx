@@ -1,10 +1,12 @@
+import Icon from "@/components/ui/icon"
+
 export function Footer() {
   const footerLinks = {
-    "Возможности": ["Планирование", "Разработка", "Аналитика", "Запросы клиентов", "Orbit Asks", "Безопасность", "Мобильное приложение"],
-    "Продукт": ["Тарифы", "Методология", "Интеграции", "История изменений", "Документация", "Скачать", "Перейти на Orbit"],
-    "Компания": ["О нас", "Клиенты", "Карьера", "Новости", "README", "Качество", "Бренд"],
-    "Ресурсы": ["Разработчикам", "Статус", "Стартапам", "Сообщить об уязвимости", "DPA", "Конфиденциальность", "Условия"],
-    "Связаться": ["Контакты", "Сообщество", "X (Twitter)", "GitHub", "YouTube"],
+    "Конструктор": ["Страховые продукты", "Тарифные планы", "Покрытия и риски", "Правила страхования", "Аналитика", "Безопасность", "Мобильный доступ"],
+    "Компания": ["О нас", "Клиенты", "Карьера", "Новости", "Качество", "Бренд", "Лицензии"],
+    "Партнёрам": ["Брокерам", "Агентам", "Банкам", "Маркетплейсам", "Программа партнёрства"],
+    "Ресурсы": ["Документация API", "Статус системы", "Вебинары", "Сообщить об уязвимости", "GDPR", "Конфиденциальность", "Условия"],
+    "Связаться": ["Контакты", "Сообщество", "Telegram", "LinkedIn", "YouTube"],
   }
 
   return (
@@ -13,16 +15,13 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Logo */}
           <div className="col-span-2 md:col-span-1">
-            <svg width="20" height="20" viewBox="0 0 100 100" fill="none" className="text-white">
-              <path
-                d="M20 30 L50 10 L80 30 L80 70 L50 90 L20 70 Z"
-                fill="currentColor"
-                stroke="currentColor"
-                strokeWidth="2"
-              />
-              <path d="M50 10 L50 50 L20 30" fill="#09090B" />
-              <path d="M50 50 L80 70 L50 90" fill="#09090B" />
-            </svg>
+            <div className="flex items-center gap-2 mb-3">
+              <Icon name="Bird" className="w-5 h-5 text-blue-400" />
+              <span className="text-white font-semibold text-sm">Альбатрос</span>
+            </div>
+            <p className="text-zinc-600 text-xs leading-relaxed">
+              Конструктор страховых продуктов нового поколения
+            </p>
           </div>
 
           {/* Links */}
@@ -40,6 +39,11 @@ export function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        <div className="mt-16 pt-8 border-t border-zinc-800/50 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-zinc-600 text-sm">© 2026 СК «Альбатрос». Все права защищены.</p>
+          <p className="text-zinc-700 text-xs">Лицензия ЦБ РФ № С-ХXXX от 01.01.2020</p>
         </div>
       </div>
     </footer>
